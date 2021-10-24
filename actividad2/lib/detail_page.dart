@@ -1,4 +1,3 @@
-import 'package:actividad2/main.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:actividad2/list_page.dart';
@@ -36,7 +35,7 @@ class DetailPage extends StatelessWidget {
                 child: Text(
                   precioProducto[numero],
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -58,7 +57,7 @@ class DetailPage extends StatelessWidget {
                   child: Text(
                     descripcionProducto[numero],
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 20,
                     ),
                   ),
