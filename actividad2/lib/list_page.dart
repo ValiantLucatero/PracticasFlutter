@@ -34,7 +34,7 @@ class ListPage extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 precioProducto[indice],
-                textScaleFactor: 1.3,
+                textScaleFactor: 1.5,
               )),
         ],
       ),
@@ -56,8 +56,27 @@ class ListPage extends StatelessWidget {
   }
 
   Widget myImage(int indice) {
-    return Image.asset(
-      imagenProducto[indice],
+    return DecoratedBox(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 1,
+            blurRadius: 2,
+            offset: Offset(3, 3),
+          ),
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Image.asset(
+          imagenProducto[indice],
+          fit: BoxFit.cover,
+          width: 100,
+          height: 100,
+        ),
+      ),
     );
   }
 
